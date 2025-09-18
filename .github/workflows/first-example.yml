@@ -4,19 +4,18 @@ jobs:
   first_job:
     runs-on: ubuntu-latest
     steps:
-      - name: welcome message
-        run: echo 'My first Github Actions Job'
-
       - name: checkout Repo
         uses: actions/checkout@v5
-
+      - name: List and Read file
+        run: |
+          echo "My First Github Actions Job"
+          ls -ltra
+          cat README.md
+      - name: Generate ASCII Artwork
+        run: cowsay -f dragon "Run for cover, I am a DRAGON ...RAWR" >> dragon.txt
+      
       # - name: install NodeJs
       #   uses: actions/setup-node@v5
       #   with:
       #     node-version: 20
 
-      - name: List files
-        run: ls -la
-      
-      - name: Read file
-        run: cat README.md

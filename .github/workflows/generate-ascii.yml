@@ -28,7 +28,7 @@ jobs:
         run: sleep 10
 
       - name: Text File exitsts
-        run: sleep 10
+        run: grep -i "dragon" dragon.txt
 
   deploy_jobs:
     runs-on: ubuntu-latest

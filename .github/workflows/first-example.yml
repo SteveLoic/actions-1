@@ -10,10 +10,10 @@ jobs:
       - name: checkout Repo
         uses: actions/checkout@v5
 
-      - name: install NodeJs
-        uses: actions/setup-node@v5
-        with:
-          node-version: 20
+      # - name: install NodeJs
+      #   uses: actions/setup-node@v5
+      #   with:
+      #     node-version: 20
 
       - name: List files
         run: ls -la

@@ -11,6 +11,6 @@ jobs:
         run: ls 
 
       - name: Executing Shell Script
-        run: ./ascii-schell.sh
-        
-      
+        run: |
+          chmod +x ./ascii-schell.sh
+          ./ascii-schell.sh

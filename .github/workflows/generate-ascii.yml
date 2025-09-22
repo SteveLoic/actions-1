@@ -17,7 +17,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: dragon-text-file
-          path: dragon.txt
+          path: text.txt
 
       # - name: Executing Shell Script
       #   run: |

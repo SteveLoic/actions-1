@@ -7,8 +7,11 @@ jobs:
   deploy:
     strategy:
       matrix: 
-        os: [ubuntu-latest, windows]
+        os: [ubuntu-latest, windows, windows-latest]
         images: [hello-world, alpine]
+        exclude:
+          - images: alpine
+            os: windows-latest
     runs-on: ${{matrix.os}}
     steps:
       - name: Echo Docker Details
